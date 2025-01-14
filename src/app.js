@@ -3,6 +3,7 @@ import express from 'express'
 //Verificar esse import (está com erro)
 import {engine} from 'express-handlebars'
 import bodyParser from 'body-parser'
+import path from 'path'
 import { routes } from './routes/routes.js'
 //import mongoose from 'mongoose'
 
@@ -14,7 +15,7 @@ import { routes } from './routes/routes.js'
     //Handlebars
         app.engine('handlebars', engine());
         app.set('view engine', 'handlebars');
-        app.set('views', './views');
+        app.set('views', './src/views');
 //Rotas
 app.get('/', (req, res)=>{
     res.render('home')
