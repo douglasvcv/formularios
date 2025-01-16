@@ -1,2 +1,15 @@
-<h1>Hello world</h1>
-<p>Teste apenas</p>
+<form action="/submit" method="POST">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
+
+<label for="email"></label>
+<input type="text" id="email" name="email" required>
+
+<button type="submit">Submit</button>
+</form>
+
+{{#if message}}
+<h2>{{message}}</h2>
+<p>{{username}}</p>
+<p>{{email}}</p>
+{{/if}}

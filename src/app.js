@@ -20,5 +20,9 @@ import { routes } from './routes/routes.js'
 app.get('/', (req, res)=>{
     res.render('home')
 })
+app.post('/submit', (req, res)=>{
+    const {username, email} = req.body
+    res.render('home', {username, email, message: 'Sucessfully message'})
+})
 //Outros
 app.listen(8080, ()=>console.log("Servidor Rodando"))
